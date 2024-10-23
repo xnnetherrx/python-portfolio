@@ -3,7 +3,8 @@
 # Created: October 18, 2024
 # Last Updated: October 23, 2024
 
-# 10/23: traditional one-on-one blackjack with a realistic 52-card deck and betting system
+# traditional one-on-one blackjack with a realistic 52-card deck and betting system
+# 10/23: fixed a bug where balance isn't adjusted after user busts
 
 ### imports
 import os
@@ -260,6 +261,7 @@ while True:
             # double checks user hasn't busted
             if total(hand) > 21:
                 print("You have busted!")
+                money = money - bet
                 loss(money, bet)
                 break
             else:
