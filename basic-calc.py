@@ -1,7 +1,7 @@
 # "Basic Calculator"
 # Joey Ilog
 # Created: October 18, 2024
-# Last Updated: August 18. 2025
+# Last Updated: August 19. 2025
 
 # simple float calculator that supports addition, subtraction, multiplication, and division for two inputs
 
@@ -38,14 +38,15 @@ def numbers(x, y):
 ### main code
 
 # asks user for their use of the calculator
-print("Welcome to NNETHERR's Calculator! (v1.1)\n")
+print("Welcome to NNETHERR's Calculator! (v1.2)\n")
 choice = prompt()
 
 # keeps the calculator running based on user's choice
 while True:
     # runs calculator tools based on user's choice
     if choice == 1: # addition
-        print("\n", "[1] Addition")
+        os.system('clear')
+        print("\n[1] Addition")
         print("\n", "x + y = z", "\n")
 
         # prompts user for x and y inputs
@@ -55,9 +56,10 @@ while True:
         z = x + y
 
         # prints out answer and asks user for next option
-        print("Your Answer: ", z, "\n")
+        print("\nYour Answer: ", z, "\n")
     elif choice == 2: # subtraction
-        print("\n", "[2] Subtraction")
+        os.system('clear')
+        print("\n[2] Subtraction")
         print("\n", "x - y = z", "\n")
 
         # prompts user for x and y inputs
@@ -67,9 +69,10 @@ while True:
         z = x - y
 
         # prints out answer and asks user for next option
-        print("Your Answer: ", z, "\n")
+        print("\nYour Answer: ", z, "\n")
     elif choice == 3: # multiplication
-        print("\n", "[3] Multiplication")
+        os.system('clear')
+        print("\n[3] Multiplication")
         print("\n", "x * y = z", "\n")
 
         # prompts user for x and y inputs
@@ -79,9 +82,10 @@ while True:
         z = x * y
 
         # prints out answer and asks user for next option
-        print("Your Answer: ", z, "\n")
+        print("\nYour Answer: ", z, "\n")
     elif choice == 4: # division
-        print("\n", "[4] Division]")
+        os.system('clear')
+        print("\n[4] Division]")
         print("\n", "x / y = z", "\n")
 
         # prompts user for x and y inputs
@@ -91,7 +95,7 @@ while True:
         z = x / y
 
         # prints out answer and asks user for next option
-        print("Your Answer: ", z, "\n")
+        print("\nYour Answer: ", z, "\n")
     elif choice == 5: # exit
         break
     else: # if numbers aren't entered
@@ -102,4 +106,4 @@ while True:
     choice = prompt()
 
 # thanks the user for using the calculator
-print("\nThank you for using NNETHERR's Calculator! (v1.1)")
+print("\nThank you for using NNETHERR's Calculator! (v1.2)")
