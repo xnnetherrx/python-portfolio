@@ -1,7 +1,7 @@
 # "Blackjack"
 # Joey Ilog
 # Created: October 18, 2024
-# Last Updated: October 23, 2024
+# Last Updated: August 19, 2024
 
 # traditional one-on-one blackjack with a realistic 52-card deck and betting system
 # 10/23: fixed a bug where balance isn't adjusted after user busts
@@ -149,7 +149,7 @@ def dealer(hand):
         hand.append(deal(deck))
 
         # presents dealer's cards hidden as if they're actually playing
-        print("\n", "Hidden", end = " ")
+        print("\nHidden", end = " ")
         time.sleep(1)
 
     # checks to see if the dealer busted
@@ -216,7 +216,7 @@ def user_bet(money):
 os.system('clear')
 
 # welcomes user and prompts them with the menu
-print("Welcome to NNETHERR's Blackjack! (v1.0)")
+print("Welcome to NNETHERR's Blackjack! (v1.1)")
 choice = menu()
 
 # clears the output screen
@@ -251,7 +251,7 @@ while True:
         hand.append(deal(deck))
 
         # hits or stands based on user's input
-        while move == 'H':
+        while move == 'H' or move == 'h':
             hand.append(deal(deck))
 
             # prints out the user's current hand
@@ -274,7 +274,7 @@ while True:
                 # clears the output screen
                 os.system('clear')
 
-        if move == 'S':
+        if move == 'S' or move == 's':
             player_sum = total(hand) # saves player's hand total
             player_hand = hand
             stand(hand) # prints move, and calculates total
@@ -298,7 +298,7 @@ while True:
                 loss(money, bet)
             if player_sum == dealer_sum:
                 print("It's a Tie!")
-                print("Your Balance: $", money, "\n")
+                print("Your Balance: $", money)
 
                 print("There are:", len(deck), "/ 52 Cards Left in this Deck")
 
@@ -313,21 +313,21 @@ while True:
             print("Deck has been reshuffled!")
 
         # asks if the user would like to play again
-        print("\n", "Would you like to play again?", "\n")
-        print("(Y)es or (N)o?")
+        print("\nWould you like to play again?")
+        print("\n(Y)es or (N)o?")
         restart = str(input("(-): "))
 
         # continues based on the user's input
-        if restart == 'Y':
+        if restart == 'Y' or restart == 'y':
             hand = []
 
             # clears the output screen
             os.system('clear')
-        if restart == 'N':
+        if restart == 'N' or restart == 'n':
             break
 
     if choice == 2: # exits if user chooses so
         break
 
 # thanks the user for playing blackjack
-print("Thank you for playing NNETHERR's Blackjack! (v1.0)")
+print("\nThank you for playing NNETHERR's Blackjack! (v1.1)")
