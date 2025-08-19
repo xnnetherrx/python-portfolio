@@ -1,9 +1,9 @@
-# "Calculator"
+# "Basic Calculator"
 # Joey Ilog
 # Created: October 18, 2024
-# Last Updated: October 18, 2024
+# Last Updated: August 18. 2025
 
-# 10/18: simple float calculator that supports addition, subtraction, multiplication, and division for two inputs
+# simple float calculator that supports addition, subtraction, multiplication, and division for two inputs
 
 # imports
 import os
@@ -28,7 +28,7 @@ def prompt():
 
 ### prompts user for their x and y inputs
 def numbers(x, y):
-    print("Please Enter X and Y: ")
+    print("Please Enter X and Y")
     x = float(input("(X): "))
     y = float(input("(Y): "))
 
@@ -38,7 +38,7 @@ def numbers(x, y):
 ### main code
 
 # asks user for their use of the calculator
-print("Welcome to NNETHERR's Calculator! (v1.0)")
+print("Welcome to NNETHERR's Calculator! (v1.1)\n")
 choice = prompt()
 
 # keeps the calculator running based on user's choice
@@ -53,7 +53,10 @@ while True:
 
         # runs calculation, stores answer in z
         z = x + y
-    if choice == 2: # subtraction
+
+        # prints out answer and asks user for next option
+        print("Your Answer: ", z, "\n")
+    elif choice == 2: # subtraction
         print("\n", "[2] Subtraction")
         print("\n", "x - y = z", "\n")
 
@@ -62,7 +65,10 @@ while True:
 
         # runs calculation, stores answer in z
         z = x - y
-    if choice == 3: # multiplication
+
+        # prints out answer and asks user for next option
+        print("Your Answer: ", z, "\n")
+    elif choice == 3: # multiplication
         print("\n", "[3] Multiplication")
         print("\n", "x * y = z", "\n")
 
@@ -71,7 +77,10 @@ while True:
 
         # runs calculation, stores answer in z
         z = x * y
-    if choice == 4: # division
+
+        # prints out answer and asks user for next option
+        print("Your Answer: ", z, "\n")
+    elif choice == 4: # division
         print("\n", "[4] Division]")
         print("\n", "x / y = z", "\n")
 
@@ -80,12 +89,17 @@ while True:
 
         # runs calculation, stores answer in z
         z = x / y
-    if choice == 5: # exit
-        break
 
-    # prints out answer and asks user for next option
-    print("Your Answer: ", z, "\n")
+        # prints out answer and asks user for next option
+        print("Your Answer: ", z, "\n")
+    elif choice == 5: # exit
+        break
+    else: # if numbers aren't entered
+        print("\nError in your input, please try again.\n")
+        choice = prompt()
+
+    # waits for user's next option
     choice = prompt()
 
 # thanks the user for using the calculator
-print("\n", "Thank you for using NNETHERR's Calculator! (v1.0)")
+print("\nThank you for using NNETHERR's Calculator! (v1.1)")
