@@ -1,7 +1,7 @@
 # "Blackjack"
 # Joey Ilog
 # Created: October 18, 2024
-# Last Updated: August 19, 2024
+# Last Updated: August 21, 2024
 
 # traditional one-on-one blackjack with a realistic 52-card deck and betting system
 # 10/23: fixed a bug where balance isn't adjusted after user busts
@@ -138,10 +138,6 @@ def dealer(hand):
     card = hand[1]
     print("\n", f"{card['rank']} of {card['suit']}", end = " ")
     time.sleep(1)
-    print("\n", "Hidden", end = " ")
-    time.sleep(1)
-    print("\n", "Hidden", end = " ")
-    time.sleep(1)
 
     while total(hand) < 16:
         
@@ -191,8 +187,7 @@ def dealer(hand):
         for x in range(0, len(player_hand)): # displays each card one by one
             card = player_hand[x]
             print("\n", f"{card['rank']} of {card['suit']}", end = " ")
-        print("\n")
-        print("Your Total: ", player_sum, "\n")
+        print("\nYour Total: ", player_sum, "\n")
         print("Dealer's Total: ", total(hand), "\n")
 
     # exits function and returns to main code
@@ -216,7 +211,7 @@ def user_bet(money):
 os.system('clear')
 
 # welcomes user and prompts them with the menu
-print("Welcome to NNETHERR's Blackjack! (v1.1)")
+print("Welcome to NNETHERR's Blackjack! (v1.2)")
 choice = menu()
 
 # clears the output screen
@@ -313,7 +308,7 @@ while True:
             print("Deck has been reshuffled!")
 
         # asks if the user would like to play again
-        print("\nWould you like to play again?")
+        print("Would you like to play again?")
         print("\n(Y)es or (N)o?")
         restart = str(input("(-): "))
 
@@ -330,4 +325,4 @@ while True:
         break
 
 # thanks the user for playing blackjack
-print("\nThank you for playing NNETHERR's Blackjack! (v1.1)")
+print("\nThank you for playing NNETHERR's Blackjack! (v1.2)")
